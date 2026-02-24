@@ -7,11 +7,10 @@ import Image from 'next/image';
 
 export default function PastorPage() {
   const career = [
-    { year: 'TBD', event: '담임목사 약력 확인 필요' },
+    { year: '', event: '장로회신학대학교 신학대학원 졸업' },
+    { year: '', event: '장로회신학대학교 대학원 졸업' },
     { year: '현재', event: '동탄구미교회 담임목사 시무 중' },
   ];
-
-  const books: { title: string; year: string; publisher: string }[] = [];
 
   const philosophies = [
     {
@@ -71,7 +70,7 @@ export default function PastorPage() {
             <p className="text-primary-light font-medium mb-3 tracking-wider text-sm uppercase">Senior Pastor</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">담임목사 소개</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              동탄구미교회 담임목사님을 소개합니다. (상세 정보 확인 예정)
+              동탄구미교회 박명수 담임목사님을 소개합니다.
             </p>
           </div>
         </section>
@@ -94,10 +93,10 @@ export default function PastorPage() {
                   <h3 className="font-bold text-secondary-dark mb-4 text-lg font-serif">목사님 정보</h3>
                   <ul className="space-y-3">
                     {[
-                      ['이름', '확인 예정'],
+                      ['이름', '박명수'],
                       ['직분', '담임목사'],
-                      ['시무기간', '확인 예정'],
-                      ['학력', '확인 예정'],
+                      ['학력', '장로회신학대학교 신학대학원'],
+                      ['대학원', '장로회신학대학교 대학원'],
                     ].map(([label, value]) => (
                       <li key={label} className="flex justify-between text-sm">
                         <span className="text-secondary-light">{label}</span>
@@ -134,7 +133,7 @@ export default function PastorPage() {
                       여러분의 자리가 이미 준비되어 있습니다.
                     </p>
                     <p className="font-serif text-primary font-medium pt-2">
-                      동탄구미교회 담임목사 올림
+                      동탄구미교회 담임목사 박명수 올림
                     </p>
                   </div>
                 </div>
@@ -176,31 +175,6 @@ export default function PastorPage() {
                   <div className="pb-6 flex items-baseline gap-4">
                     <span className="text-primary font-bold text-lg min-w-[50px]">{item.year}</span>
                     <p className="text-secondary">{item.event}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Published Books */}
-        <section className="section bg-white">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <p className="section-label">Publications</p>
-              <h2 className="section-title">저서</h2>
-            </div>
-            <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4">
-              {books.map((book) => (
-                <div key={book.title} className="flex items-center gap-4 p-5 bg-brown-50 rounded-2xl border border-brown-100 hover:shadow-md transition-shadow">
-                  <div className="w-12 h-16 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-secondary-dark">{book.title}</h4>
-                    <p className="text-secondary-light text-sm">{book.publisher}, {book.year}</p>
                   </div>
                 </div>
               ))}

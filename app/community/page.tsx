@@ -79,7 +79,7 @@ export default function CommunityPage() {
             <p className="text-primary-light font-medium mb-3 tracking-wider text-sm uppercase">Community</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">교제와 소식</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              은혜교회의 다양한 소식과 행사를 확인하세요.<br className="hidden sm:block" />
+              동탄구미교회의 다양한 소식과 행사를 확인하세요.<br className="hidden sm:block" />
               함께 나누고 섬기는 아름다운 공동체입니다.
             </p>
           </div>

@@ -6,25 +6,19 @@ import Image from 'next/image';
 
 export default function WorshipPage() {
   const mainServices = [
-    { name: '주일 1부 예배', time: '오전 7:00', target: '전 교인', location: '본당', description: '새벽을 여는 첫 번째 예배로, 경건한 찬양과 말씀으로 주일을 시작합니다.' },
-    { name: '주일 2부 예배', time: '오전 9:30', target: '전 교인', location: '본당', description: '가족과 함께하는 예배로, 찬양팀의 은혜로운 찬양이 함께합니다.' },
-    { name: '주일 3부 예배', time: '오전 11:30', target: '전 교인', location: '본당', description: '청년과 새가족이 많이 참여하는 예배입니다.' },
+    { name: '주일 1부 예배', time: '오전 9:00', target: '전 교인', location: '본당', description: '경건한 찬양과 말씀으로 주일을 시작합니다.' },
+    { name: '주일 2부 예배', time: '오전 11:30', target: '전 교인', location: '본당', description: '가족과 함께하는 예배입니다.' },
   ];
 
   const weeklyServices = [
-    { name: '수요 예배', day: '매주 수요일', time: '오후 7:30', location: '본당', description: '한 주의 중간, 말씀으로 재충전하는 시간입니다.' },
-    { name: '금요 기도회', day: '매주 금요일', time: '오후 9:00', location: '기도실', description: '뜨거운 기도로 한 주를 마무리하는 기도 모임입니다.' },
-    { name: '새벽 예배', day: '매일 (월-토)', time: '오전 5:30', location: '소예배실', description: '매일 새벽, 하루를 말씀과 기도로 시작합니다.' },
+    { name: '수요 기도회', day: '매주 수요일', time: '오후 7:30', location: '본당', description: '한 주의 중간, 말씀으로 재충전하는 시간입니다.' },
+    { name: '새벽 기도회', day: '매일 (화-금)', time: '오전 6:00', location: '본당', description: '매일 새벽, 하루를 말씀과 기도로 시작합니다.' },
   ];
 
   const departmentServices = [
-    { name: '영아부', time: '주일 오전 9:30', target: '0-3세', location: '영아부실' },
-    { name: '유치부', time: '주일 오전 11:30', target: '4-6세', location: '유치부실' },
-    { name: '유초등부', time: '주일 오전 11:30', target: '초등 1-3학년', location: '초등부실' },
-    { name: '초등부', time: '주일 오전 11:30', target: '초등 4-6학년', location: '초등부실' },
-    { name: '중등부', time: '주일 오후 1:30', target: '중학생', location: '중등부실' },
-    { name: '고등부', time: '주일 오후 2:00', target: '고등학생', location: '고등부실' },
-    { name: '청년부', time: '주일 오후 1:30', target: '대학생/청년', location: '청년부실' },
+    { name: '아동부', time: '주일 오전 11:30', target: '유치~초등학생', location: '교육관' },
+    { name: '청소년부', time: '주일 오전 11:30', target: '중·고등학생', location: '교육관' },
+    { name: '청년부', time: '주일 오후', target: '대학생/청년', location: '교육관' },
   ];
 
   return (
@@ -46,7 +40,7 @@ export default function WorshipPage() {
             <p className="text-primary-light font-medium mb-3 tracking-wider text-sm uppercase">Worship</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">예배 안내</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              은혜교회의 모든 예배에 여러분을 초대합니다.<br className="hidden sm:block" />
+              동탄구미교회의 모든 예배에 여러분을 초대합니다.<br className="hidden sm:block" />
               함께 찬양하고 말씀을 나누는 은혜의 시간이 되길 바랍니다.
             </p>
           </div>
@@ -160,9 +154,8 @@ export default function WorshipPage() {
               </h3>
               <ul className="space-y-2 text-secondary-light text-sm">
                 <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>처음 방문하시는 분은 안내데스크에서 새가족 등록을 해주세요.</li>
-                <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>주차장은 지하 1층~3층에 마련되어 있습니다.</li>
-                <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>온라인 예배는 교회 유튜브 채널에서 생중계됩니다.</li>
-                <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>수어 통역은 주일 2부 예배에서 제공됩니다.</li>
+                <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>교회 주차장을 이용하실 수 있습니다.</li>
+                <li className="flex items-start gap-2"><span className="text-primary mt-1">&#8226;</span>주소: 경기도 화성시 동탄구 장지안길 3</li>
               </ul>
             </div>
           </div>

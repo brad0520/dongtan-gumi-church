@@ -8,7 +8,7 @@ export default function SermonsPage() {
   const recentSermons = [
     {
       title: '은혜의 능력',
-      speaker: '김은혜 목사',
+      speaker: '박명수 목사',
       date: '2025년 1월 19일',
       series: '로마서 강해',
       scripture: '로마서 5:1-11',
@@ -16,7 +16,7 @@ export default function SermonsPage() {
     },
     {
       title: '믿음의 여정',
-      speaker: '김은혜 목사',
+      speaker: '박명수 목사',
       date: '2025년 1월 12일',
       series: '로마서 강해',
       scripture: '로마서 4:13-25',
@@ -24,7 +24,7 @@ export default function SermonsPage() {
     },
     {
       title: '의롭다 하심을 받는 자',
-      speaker: '김은혜 목사',
+      speaker: '박명수 목사',
       date: '2025년 1월 5일',
       series: '로마서 강해',
       scripture: '로마서 3:21-31',
@@ -32,7 +32,7 @@ export default function SermonsPage() {
     },
     {
       title: '새해, 새 마음',
-      speaker: '박사랑 목사',
+      speaker: '박명수 목사',
       date: '2024년 12월 29일',
       series: '신년 특별 설교',
       scripture: '에스겔 36:26-27',
@@ -40,7 +40,7 @@ export default function SermonsPage() {
     },
     {
       title: '성탄의 기쁨',
-      speaker: '김은혜 목사',
+      speaker: '박명수 목사',
       date: '2024년 12월 25일',
       series: '성탄 특별 설교',
       scripture: '누가복음 2:8-20',
@@ -48,7 +48,7 @@ export default function SermonsPage() {
     },
     {
       title: '기다림의 축복',
-      speaker: '김은혜 목사',
+      speaker: '박명수 목사',
       date: '2024년 12월 22일',
       series: '대림절 시리즈',
       scripture: '이사야 40:28-31',
@@ -83,7 +83,7 @@ export default function SermonsPage() {
             <p className="text-primary-light font-medium mb-3 tracking-wider text-sm uppercase">Sermons</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">설교</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              은혜교회의 주일 설교를 다시 들으실 수 있습니다.<br className="hidden sm:block" />
+              동탄구미교회의 주일 설교를 다시 들으실 수 있습니다.<br className="hidden sm:block" />
               말씀을 통해 삶의 방향을 찾아가시길 바랍니다.
             </p>
           </div>

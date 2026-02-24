@@ -7,12 +7,11 @@ import Image from 'next/image';
 
 export default function Home() {
   const worshipSchedule = [
-    { name: '주일 1부 예배', time: '오전 7:00', location: '본당', icon: '🌅' },
-    { name: '주일 2부 예배', time: '오전 9:30', location: '본당', icon: '☀️' },
-    { name: '주일 3부 예배', time: '오전 11:30', location: '본당', icon: '🕊️' },
-    { name: '수요 예배', time: '수요일 오후 7:30', location: '본당', icon: '📖' },
-    { name: '금요 기도회', time: '금요일 오후 9:00', location: '기도실', icon: '🙏' },
-    { name: '새벽 예배', time: '매일 오전 5:30', location: '소예배실', icon: '✨' },
+    { name: '주일 1부 예배', time: '오전 9:00', location: '본당', icon: '🌅' },
+    { name: '주일 2부 예배', time: '오전 11:30', location: '본당', icon: '☀️' },
+    { name: '교회학교', time: '주일 오전 11:30', location: '교육관', icon: '🕊️' },
+    { name: '수요 기도회', time: '수요일 오후 7:30', location: '본당', icon: '📖' },
+    { name: '새벽 기도회', time: '화~금 오전 6:00', location: '본당', icon: '🙏' },
   ];
 
   const ministries = [
@@ -136,7 +135,7 @@ export default function Home() {
                   한 사람 한 사람을 소중히 여기는<br className="hidden md:block" />
                   가족 같은 공동체입니다.&rdquo;
                 </blockquote>
-                <p className="text-white/70 font-medium text-lg mb-1">담임목사 (확인 예정)</p>
+                <p className="text-white/70 font-medium text-lg mb-1">박명수 목사</p>
                 <Link href="/pastor" className="inline-block mt-3 text-primary-light hover:text-primary font-medium transition-colors text-sm">
                   목사님 소개 자세히 보기 →
                 </Link>
@@ -254,7 +253,7 @@ export default function Home() {
                 <p className="section-label">Small Groups</p>
                 <h2 className="text-3xl font-bold text-secondary-dark font-serif mb-4">소그룹에서 만나요</h2>
                 <p className="text-secondary-light leading-relaxed mb-6">
-                  동탄구미교회의 소그룹은 5~8명의 소규모 모임입니다.
+                  동탄구미교회의 소그룹(코이노니아)은 소규모 모임입니다.
                   함께 말씀을 나누고, 삶을 나누며, 서로를 위해 기도합니다.
                   진정한 교제는 작은 모임에서 시작됩니다.
                 </p>

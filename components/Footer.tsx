@@ -39,10 +39,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider">바로가기</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/about" className="text-brown-200/70 hover:text-primary transition-colors">교회소개</Link></li>
-              <li><Link href="/worship" className="text-brown-200/70 hover:text-primary transition-colors">예배안내</Link></li>
-              <li><Link href="/sermons" className="text-brown-200/70 hover:text-primary transition-colors">설교</Link></li>
-              <li><Link href="/community" className="text-brown-200/70 hover:text-primary transition-colors">교제와 소식</Link></li>
+              <li><Link href="/worship" className="text-brown-200/70 hover:text-primary transition-colors">예배</Link></li>
+              <li><Link href="/education" className="text-brown-200/70 hover:text-primary transition-colors">교육</Link></li>
+              <li><Link href="/about" className="text-brown-200/70 hover:text-primary transition-colors">교회</Link></li>
+              <li><Link href="/sermons" className="text-brown-200/70 hover:text-primary transition-colors">미디어</Link></li>
+              <li><Link href="/community" className="text-brown-200/70 hover:text-primary transition-colors">코이노니아</Link></li>
               <li><Link href="/contact" className="text-brown-200/70 hover:text-primary transition-colors">오시는 길</Link></li>
             </ul>
           </div>

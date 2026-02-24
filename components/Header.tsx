@@ -7,12 +7,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: '교회소개', href: '/about' },
-    { name: '목사 소개', href: '/pastor' },
-    { name: '예배안내', href: '/worship' },
-    { name: '설교', href: '/sermons' },
-    { name: '교제와 소식', href: '/community' },
-    { name: '오시는 길', href: '/contact' },
+    { name: '예배', href: '/worship' },
+    { name: '교육', href: '/education' },
+    { name: '선교', href: '/mission' },
+    { name: '교회', href: '/about' },
+    { name: '미디어', href: '/sermons' },
+    { name: '코이노니아', href: '/community' },
   ];
 
   return (

@@ -13,11 +13,23 @@ export default function AboutPage() {
 
   const staff = [
     {
-      name: '담임목사 (확인 예정)',
+      name: '박명수 목사',
       role: '담임목사',
-      description: '동탄구미교회를 섬기고 있습니다. (상세 정보 확인 필요)',
+      description: '장로회신학대학교 신학대학원 졸업. 말씀과 기도로 동탄구미교회를 섬기고 있습니다.',
       image: 'https://images.unsplash.com/photo-1758600432277-5c76801e584a?w=300&h=300&fit=crop&crop=face',
       link: '/pastor',
+    },
+    {
+      name: '김애경 전도사',
+      role: '아동부 담당',
+      description: '아이들의 신앙 성장을 위해 헌신하며, 아동부 예배와 교육을 담당합니다.',
+      image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=300&h=300&fit=crop&crop=face',
+    },
+    {
+      name: '최민정 전도사',
+      role: '청소년부 담당',
+      description: '청소년들의 믿음의 성장을 돕고, 청소년부 예배와 활동을 이끌고 있습니다.',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face',
     },
   ];
 
@@ -121,7 +133,7 @@ export default function AboutPage() {
               <p className="section-label">Our Leaders</p>
               <h2 className="section-title">교역자 소개</h2>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {staff.map((person) => (
                 <div key={person.name} className="card overflow-hidden group">
                   <div className="h-52 overflow-hidden">
