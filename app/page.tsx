@@ -38,15 +38,17 @@ export default function Home() {
 
       <main className="pt-16 md:pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-[600px] md:min-h-[720px] flex items-center overflow-hidden">
+        <section className="relative min-h-[520px] md:min-h-0 overflow-hidden bg-brown-800">
           <Image
             src="/church-hero.jpg"
             alt="동탄구미교회 전경"
-            fill
-            className="object-cover"
+            width={1920}
+            height={1243}
+            className="w-full h-full md:h-auto object-contain md:object-none block"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brown-800/60 via-brown-800/40 to-brown-800/70" />
+          <div className="absolute inset-0 flex items-center">
           <div className="container-custom relative z-10 text-center">
             <div className="inline-block mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
               <span className="text-primary-light font-medium text-sm tracking-wider">Welcome to Dongtan Gumi Church</span>
@@ -66,6 +68,7 @@ export default function Home() {
                 교회 소개
               </Link>
             </div>
+          </div>
           </div>
         </section>
 
