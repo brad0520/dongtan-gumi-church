@@ -193,7 +193,7 @@ export default function AboutPage() {
                 src="/church-hero.jpg"
                 alt="동탄구미교회 전경"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
             <div className="h-64 md:h-96 overflow-hidden relative">
