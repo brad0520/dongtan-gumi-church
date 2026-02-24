@@ -49,9 +49,6 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brown-800/60 via-brown-800/40 to-brown-800/70" />
           <div className="container-custom relative z-10 text-center">
-            <div className="inline-block mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-              <span className="text-primary-light font-medium text-sm tracking-wider">Welcome to Dongtan Gumi Church</span>
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif leading-tight">
               따뜻한 가족 같은<br />동탄구미교회
             </h1>
