@@ -42,8 +42,9 @@ export default function Home() {
           <Image
             src="/church-hero.jpg"
             alt="동탄구미교회 전경"
-            fill
-            className="object-contain"
+            width={1920}
+            height={1243}
+            className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto max-w-none"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brown-800/60 via-brown-800/40 to-brown-800/70" />
