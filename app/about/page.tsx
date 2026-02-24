@@ -190,8 +190,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2">
             <div className="h-64 md:h-96 overflow-hidden relative">
               <Image
-                src="https://images.unsplash.com/photo-1652753284924-81f8e96a8d09?w=800&h=600&fit=crop"
-                alt="교회 내부"
+                src="/church-hero.jpg"
+                alt="동탄구미교회 전경"
                 fill
                 className="object-cover"
               />

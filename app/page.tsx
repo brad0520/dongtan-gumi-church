@@ -40,8 +40,8 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-[600px] md:min-h-[720px] flex items-center overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&h=1080&fit=crop"
-            alt="교회 내부"
+            src="/church-hero.jpg"
+            alt="동탄구미교회 전경"
             fill
             className="object-cover"
             priority
@@ -187,8 +187,8 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1708179538422-373c25988a5f?w=800&h=800&fit=crop"
-                  alt="교회 예배당"
+                  src="/church-hero.jpg"
+                  alt="동탄구미교회 전경"
                   width={800}
                   height={800}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
