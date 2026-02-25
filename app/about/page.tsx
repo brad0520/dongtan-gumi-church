@@ -34,7 +34,7 @@ export default function AboutPage() {
       name: '최민정 전도사',
       role: '청소년부 담당',
       description: '청소년들의 믿음의 성장을 돕고, 청소년부 예배와 활동을 이끌고 있습니다.',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=face',
+      image: '/staff-choi.jpg',
     },
   ];
 
