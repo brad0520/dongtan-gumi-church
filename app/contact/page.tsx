@@ -13,8 +13,8 @@ export default function ContactPage() {
         {/* Hero */}
         <section className="page-hero">
           <Image
-            src="https://images.unsplash.com/photo-1708179538422-373c25988a5f?w=1920&h=600&fit=crop"
-            alt="교회 건물"
+            src="/church-hero.jpg"
+            alt="동탄구미교회 전경"
             fill
             className="object-cover"
             priority
@@ -34,21 +34,20 @@ export default function ContactPage() {
         <section className="section bg-white">
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-12">
-              <div className="rounded-2xl overflow-hidden min-h-[400px] relative">
+              <div className="rounded-2xl overflow-hidden bg-white border border-brown-100 p-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1761530027871-5e0f4c13744d?w=800&h=600&fit=crop"
-                  alt="동탄구미교회 건물"
-                  fill
-                  className="object-cover"
+                  src="/church-map.jpg"
+                  alt="동탄구미교회 약도"
+                  width={745}
+                  height={548}
+                  className="w-full h-auto"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <div className="flex items-center gap-2 text-white">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span className="text-sm font-medium">경기도 화성시 동탄구 장지안길 3</span>
-                  </div>
+                <div className="mt-3 flex items-center gap-2 text-secondary">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span className="text-sm font-medium">경기도 화성시 동탄구 장지안길 3</span>
                 </div>
               </div>
 
@@ -100,7 +99,7 @@ export default function ContactPage() {
                         <span className="w-5 h-5 bg-green-500 rounded text-white text-xs flex items-center justify-center font-bold">B</span>
                         버스
                       </p>
-                      <p className="text-secondary-light text-sm pl-7">동탄 지역 버스 이용 (노선 확인 중)</p>
+                      <p className="text-secondary-light text-sm pl-7">동탄대로 2길 / 경기동로 인근 (장지IC 방면)</p>
                     </div>
                     <div>
                       <p className="font-medium text-secondary-dark text-sm mb-1 flex items-center gap-2">
@@ -114,7 +113,7 @@ export default function ContactPage() {
                         <span className="w-5 h-5 bg-blue-500 rounded text-white text-xs flex items-center justify-center font-bold">C</span>
                         자가용
                       </p>
-                      <p className="text-secondary-light text-sm pl-7">네비게이션: &quot;경기도 화성시 동탄구 장지안길 3&quot; 검색</p>
+                      <p className="text-secondary-light text-sm pl-7">장지IC에서 약 2분 / 네비게이션: &quot;동탄구미교회&quot; 검색</p>
                     </div>
                   </div>
                 </div>

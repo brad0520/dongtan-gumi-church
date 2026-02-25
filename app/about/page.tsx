@@ -7,8 +7,13 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   const history = [
-    { year: 'TBD', event: '동탄구미교회 설립 (교회 연혁 확인 필요)' },
-    { year: 'TBD', event: '현재 위치로 이전 (경기도 화성시 동탄구 장지안길 3)' },
+    { year: '2017. 2', event: '동탄구미교회 개척 / 창립감사예배 / 박명수 목사 초대 담임목사 부임' },
+    { year: '2017. 3', event: '로뎀상담센터 개원' },
+    { year: '2017. 10', event: '대한예수교장로회(통합) 경기노회 가입' },
+    { year: '2019. 9', event: '동탄구미작은도서관 개관' },
+    { year: '2020. 3', event: '상가주택 매입하여 이전 (동탄순환대로 3가길 14-10)' },
+    { year: '2020. 6', event: '성전이전 감사예배' },
+    { year: '2024. 6', event: '현 성전 입당 감사예배 (장지안길 3)' },
   ];
 
   const staff = [
@@ -16,14 +21,14 @@ export default function AboutPage() {
       name: '박명수 목사',
       role: '담임목사',
       description: '장로회신학대학교 신학대학원 졸업. 말씀과 기도로 동탄구미교회를 섬기고 있습니다.',
-      image: 'https://images.unsplash.com/photo-1758600432277-5c76801e584a?w=300&h=300&fit=crop&crop=face',
+      image: '/pastor-park.jpg',
       link: '/pastor',
     },
     {
       name: '김애경 전도사',
       role: '아동부 담당',
       description: '아이들의 신앙 성장을 위해 헌신하며, 아동부 예배와 교육을 담당합니다.',
-      image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=300&h=300&fit=crop&crop=face',
+      image: '/staff-kim.jpg',
     },
     {
       name: '최민정 전도사',
@@ -71,8 +76,8 @@ export default function AboutPage() {
         {/* Page Hero */}
         <section className="page-hero">
           <Image
-            src="https://images.unsplash.com/photo-1604917272299-34d9d0f9dbad?w=1920&h=600&fit=crop"
-            alt="교회 건물"
+            src="/church-hero.jpg"
+            alt="동탄구미교회 전경"
             fill
             className="object-cover"
             priority
@@ -170,7 +175,7 @@ export default function AboutPage() {
             </div>
             <div className="max-w-2xl mx-auto">
               {history.map((item, index) => (
-                <div key={item.year} className="flex gap-6 mb-8 last:mb-0">
+                <div key={index} className="flex gap-6 mb-8 last:mb-0">
                   <div className="flex flex-col items-center">
                     <div className="w-4 h-4 bg-primary rounded-full ring-4 ring-primary/20" />
                     {index < history.length - 1 && <div className="w-0.5 h-full bg-brown-200 mt-2" />}
@@ -185,27 +190,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Church Building Photos */}
-        <section className="py-0">
-          <div className="grid md:grid-cols-2">
-            <div className="h-64 md:h-96 overflow-hidden relative">
-              <Image
-                src="/church-hero.jpg"
-                alt="동탄구미교회 전경"
-                fill
-                className="object-cover object-center"
-              />
-            </div>
-            <div className="h-64 md:h-96 overflow-hidden relative">
-              <Image
-                src="https://images.unsplash.com/photo-1664006262237-f885533eb5e8?w=800&h=600&fit=crop"
-                alt="교회 외관"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

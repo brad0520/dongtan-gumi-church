@@ -43,7 +43,7 @@ export default function Home() {
             src="/church-hero.jpg"
             alt="동탄구미교회 전경"
             width={1920}
-            height={1243}
+            height={1336}
             className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto max-w-none"
             priority
           />
@@ -119,8 +119,8 @@ export default function Home() {
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl flex-shrink-0 ring-4 ring-white/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1758600432277-5c76801e584a?w=400&h=400&fit=crop&crop=face"
-                  alt="담임목사"
+                  src="/pastor-park.jpg"
+                  alt="박명수 담임목사"
                   width={224}
                   height={224}
                   className="w-full h-full object-cover"

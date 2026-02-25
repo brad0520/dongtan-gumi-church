@@ -9,6 +9,7 @@ export default function PastorPage() {
   const career = [
     { year: '', event: '장로회신학대학교 신학대학원 졸업' },
     { year: '', event: '장로회신학대학교 대학원 졸업' },
+    { year: '2017', event: '동탄구미교회 개척 / 초대 담임목사 부임' },
     { year: '현재', event: '동탄구미교회 담임목사 시무 중' },
   ];
 
@@ -59,8 +60,8 @@ export default function PastorPage() {
         {/* Hero */}
         <section className="page-hero">
           <Image
-            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&h=600&fit=crop"
-            alt="교회 배경"
+            src="/church-hero.jpg"
+            alt="동탄구미교회 전경"
             fill
             className="object-cover"
             priority
@@ -82,10 +83,10 @@ export default function PastorPage() {
               <div className="lg:w-2/5 flex-shrink-0">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1758600432277-5c76801e584a?w=600&h=750&fit=crop&crop=face"
-                    alt="담임목사"
+                    src="/pastor-park.jpg"
+                    alt="박명수 담임목사"
                     width={600}
-                    height={750}
+                    height={754}
                     className="w-full h-auto"
                   />
                 </div>
