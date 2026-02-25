@@ -29,12 +29,14 @@ export default function AboutPage() {
       role: '아동부 담당',
       description: '아이들의 신앙 성장을 위해 헌신하며, 아동부 예배와 교육을 담당합니다.',
       image: '/staff-kim.jpg',
+      imagePosition: 'center top',
     },
     {
       name: '최민정 전도사',
       role: '청소년부 담당',
       description: '청소년들의 믿음의 성장을 돕고, 청소년부 예배와 활동을 이끌고 있습니다.',
       image: '/staff-choi.jpg',
+      imagePosition: 'center 15%',
     },
   ];
 
@@ -141,13 +143,14 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {staff.map((person) => (
                 <div key={person.name} className="card overflow-hidden group">
-                  <div className="h-52 overflow-hidden">
+                  <div className="h-80 sm:h-64 overflow-hidden">
                     <Image
                       src={person.image}
                       alt={person.name}
                       width={300}
-                      height={300}
+                      height={380}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: person.imagePosition || 'center center' }}
                     />
                   </div>
                   <div className="p-5 text-center">

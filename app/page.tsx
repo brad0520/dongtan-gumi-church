@@ -124,6 +124,7 @@ export default function Home() {
                   width={224}
                   height={224}
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 18%' }}
                 />
               </div>
               <div className="text-center md:text-left text-white">
