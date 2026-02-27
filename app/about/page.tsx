@@ -36,7 +36,7 @@ export default function AboutPage() {
       role: '청소년부 담당',
       description: '청소년들의 믿음의 성장을 돕고, 청소년부 예배와 활동을 이끌고 있습니다.',
       image: '/staff-choi.jpg',
-      imagePosition: 'center 15%',
+      imagePosition: 'center center',
     },
   ];
 
