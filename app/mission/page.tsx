@@ -1,10 +1,71 @@
 'use client';
 
+import { useState, useEffect, useCallback } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export default function MissionPage() {
+  const [selectedMission, setSelectedMission] = useState<number | null>(null);
+
+  const closeMission = useCallback(() => setSelectedMission(null), []);
+
+  useEffect(() => {
+    if (selectedMission === null) return;
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMission();
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleEsc);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, [selectedMission, closeMission]);
+
+  const missions = [
+    {
+      number: '첫 번째',
+      region: '일본 (도쿄)',
+      missionary: '이혜숙 선교사',
+      church: '사랑의 교회',
+      description: '일본 도쿄에서 사랑의 교회를 섬기며, 홈페이지를 통한 전도와 현지인 양육에 힘쓰고 있습니다.',
+      image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop',
+      pdfImage: '/mission-japan.jpg',
+      flag: '🇯🇵',
+    },
+    {
+      number: '두 번째',
+      region: '튀르키예',
+      missionary: '김Yusuf, 강Ester 선교사',
+      church: '서머나 한인 교회',
+      description: '튀르키예 이즈미르에서 한인회와 다문화 가정을 섬기고, 한글학교를 운영하며, 현지 공동체에서 사역하고 있습니다.',
+      image: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600&h=400&fit=crop',
+      pdfImage: '/mission-turkey.jpg',
+      flag: '🇹🇷',
+    },
+    {
+      number: '세 번째',
+      region: '국내 (전남 함평군)',
+      missionary: '강명훈 목사',
+      church: '대각교회',
+      description: '전남 함평군 산골 마을에서 목회자와 사모가 6명의 성도와 함께 믿음 생활을 하며, 작은 산골 교회에서 복음을 전하고 있습니다.',
+      image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop',
+      pdfImage: '/mission-hampyeong.jpg',
+      flag: '🇰🇷',
+    },
+    {
+      number: '네 번째',
+      region: '가나',
+      missionary: '은레투라 바디본베',
+      church: '아동 후원',
+      description: '가나의 어린이 은레투라를 후원하며, 교육과 신앙 성장을 지원하고 있습니다. 간호사를 꿈꾸는 은레투라가 하나님의 지혜 가운데 성장하도록 기도합니다.',
+      image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop',
+      pdfImage: '/mission-ghana.jpg',
+      flag: '🇬🇭',
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -30,73 +91,98 @@ export default function MissionPage() {
           </div>
         </section>
 
-        {/* Mission Areas */}
+        {/* Mission Title */}
+        <section className="py-12 bg-cream">
+          <div className="container-custom text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark font-serif">
+              동탄구미 선교이야기
+            </h2>
+            <p className="text-secondary-light mt-3 max-w-lg mx-auto">
+              동탄구미교회가 함께하는 4곳의 선교 현장을 소개합니다.<br />
+              <span className="text-primary text-sm font-medium">카드를 클릭하면 상세 내용을 볼 수 있습니다.</span>
+            </p>
+          </div>
+        </section>
+
+        {/* Mission Fields */}
         <section className="section bg-white">
           <div className="container-custom">
-            <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-              {/* 국내 선교 */}
-              <div className="card overflow-hidden">
-                <div className="h-56 overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop"
-                    alt="국내 선교"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-7">
-                  <p className="section-label">Domestic Mission</p>
-                  <h2 className="text-2xl font-bold text-secondary-dark font-serif mb-4">국내 선교</h2>
-                  <p className="text-secondary-light leading-relaxed text-sm">
-                    지역사회 봉사 활동, 농어촌 교회 지원, 소외 계층 섬김 등
-                    국내 선교 사역을 통해 이웃에게 복음을 전합니다.
-                  </p>
-                </div>
-              </div>
-
-              {/* 해외 선교 */}
-              <div className="card overflow-hidden">
-                <div className="h-56 overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop"
-                    alt="해외 선교"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-7">
-                  <p className="section-label">Overseas Mission</p>
-                  <h2 className="text-2xl font-bold text-secondary-dark font-serif mb-4">해외 선교</h2>
-                  <p className="text-secondary-light leading-relaxed text-sm">
-                    해외 선교사 파송 및 지원, 단기 선교팀 활동 등을 통해
-                    세계 복음화에 동참하고 있습니다.
-                  </p>
-                </div>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-10">
+              {missions.map((mission, index) => (
+                <button
+                  key={mission.region}
+                  onClick={() => setSelectedMission(index)}
+                  className={`card overflow-hidden flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} w-full text-left cursor-pointer hover:shadow-xl hover:border-primary/30 transition-all group`}
+                >
+                  <div className="md:w-2/5 h-56 md:h-auto overflow-hidden flex-shrink-0">
+                    <Image
+                      src={mission.image}
+                      alt={mission.region}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-7 md:p-8 flex-1">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-2xl">{mission.flag}</span>
+                      <span className="text-xs bg-primary/10 text-primary font-medium px-3 py-1 rounded-full">
+                        {mission.number} 선교이야기
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-secondary-dark font-serif mb-1 group-hover:text-primary transition-colors">{mission.region}</h3>
+                    <p className="text-primary font-medium text-sm mb-1">{mission.missionary}</p>
+                    <p className="text-secondary-light/70 text-sm mb-4">{mission.church}</p>
+                    <p className="text-secondary-light leading-relaxed text-sm">{mission.description}</p>
+                    <p className="text-primary text-sm font-medium mt-4 flex items-center gap-1 group-hover:gap-2 transition-all">
+                      자세히 보기
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </p>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </section>
-
-        {/* Scripture Banner */}
-        <section className="relative py-20 overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1617540860341-69294ce4adad?w=1920&h=600&fit=crop"
-            alt="십자가"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-brown-800/80" />
-          <div className="container-custom relative z-10 text-center text-white">
-            <blockquote className="text-2xl md:text-3xl font-serif leading-relaxed max-w-3xl mx-auto mb-4 italic">
-              &ldquo;그러므로 너희는 가서 모든 민족을 제자로 삼아<br className="hidden md:block" />
-              아버지와 아들과 성령의 이름으로 세례를 베풀고&rdquo;
-            </blockquote>
-            <cite className="text-white/70">- 마태복음 28:19 -</cite>
-          </div>
-        </section>
       </main>
+
+      {/* Modal Popup */}
+      {selectedMission !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          onClick={closeMission}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeMission}
+              className="absolute top-3 right-3 z-10 w-9 h-9 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-colors"
+              aria-label="닫기"
+            >
+              <svg className="w-5 h-5 text-secondary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* PDF Page Image */}
+            <div className="overflow-y-auto max-h-[90vh]">
+              <Image
+                src={missions[selectedMission].pdfImage}
+                alt={`${missions[selectedMission].region} 선교이야기`}
+                width={1673}
+                height={2360}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>

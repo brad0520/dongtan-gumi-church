@@ -12,23 +12,23 @@ export default function EducationPage() {
       time: '주일 오전 11:30',
       leader: '김애경 전도사',
       description: '말씀과 찬양, 놀이를 통해 하나님의 사랑을 배우는 시간입니다. 아이들의 눈높이에 맞춘 예배와 교육 프로그램을 운영합니다.',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?w=400&h=300&fit=crop',
     },
     {
       name: '청소년부',
       target: '중·고등학생',
       time: '주일 오전 11:30',
-      leader: '최민정 전도사',
+      leader: '담당 전도사',
       description: '청소년기의 신앙 성장을 돕는 예배와 소그룹 활동을 진행합니다. 또래 친구들과 함께 믿음 안에서 성장합니다.',
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop',
     },
     {
       name: '청년부',
       target: '대학생·청년',
       time: '주일 오후',
-      leader: '담당자 확인 중',
+      leader: '최민정 전도사',
       description: '대학생과 청년이 함께 모여 말씀을 나누고 교제하는 시간입니다. 삶의 현장에서 믿음을 실천하도록 함께 훈련합니다.',
-      image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop',
     },
   ];
 
@@ -40,7 +40,7 @@ export default function EducationPage() {
         {/* Hero */}
         <section className="page-hero">
           <Image
-            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=600&fit=crop"
+            src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?w=1920&h=600&fit=crop"
             alt="교육"
             fill
             className="object-cover"
@@ -89,24 +89,6 @@ export default function EducationPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Scripture Banner */}
-        <section className="relative py-20 overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1920&h=600&fit=crop"
-            alt="성경"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-brown-800/80" />
-          <div className="container-custom relative z-10 text-center text-white">
-            <blockquote className="text-2xl md:text-3xl font-serif leading-relaxed max-w-3xl mx-auto mb-4 italic">
-              &ldquo;마땅히 행할 길을 아이에게 가르치라<br className="hidden md:block" />
-              그리하면 늙어도 그것을 떠나지 아니하리라&rdquo;
-            </blockquote>
-            <cite className="text-white/70">- 잠언 22:6 -</cite>
           </div>
         </section>
       </main>

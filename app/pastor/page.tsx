@@ -2,7 +2,6 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export default function PastorPage() {
@@ -198,14 +197,6 @@ export default function PastorPage() {
               &ldquo;신앙은 혼자 걷는 길이 아닙니다.<br className="hidden md:block" />
               함께 손잡고 걸어갈 때 더 멀리, 더 깊이 갈 수 있습니다.&rdquo;
             </blockquote>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link href="/sermons" className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-medium transition-colors">
-                설교 듣기
-              </Link>
-              <Link href="/contact" className="bg-white/15 hover:bg-white/25 text-white border border-white/30 px-8 py-3 rounded-full font-medium transition-colors backdrop-blur-sm">
-                상담 문의
-              </Link>
-            </div>
           </div>
         </section>
       </main>

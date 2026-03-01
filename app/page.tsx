@@ -6,32 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Home() {
-  const worshipSchedule = [
-    { name: '주일 1부 예배', time: '오전 9:00', location: '본당', icon: '🌅' },
-    { name: '주일 2부 예배', time: '오전 11:30', location: '본당', icon: '☀️' },
-    { name: '교회학교', time: '주일 오전 11:30', location: '교육관', icon: '🕊️' },
-    { name: '수요 기도회', time: '수요일 오후 7:30', location: '본당', icon: '📖' },
-    { name: '새벽 기도회', time: '화~금 오전 6:00', location: '본당', icon: '🙏' },
-  ];
-
-  const ministries = [
-    {
-      image: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&h=300&fit=crop',
-      title: '말씀 사역',
-      description: '성경공부, 제자훈련, 양육 프로그램을 통해 말씀 안에서 함께 성장합니다.',
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop',
-      title: '교제 사역',
-      description: '소그룹 모임, 세대별 교제를 통해 서로를 돌보며 사랑을 나눕니다.',
-    },
-    {
-      image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&h=300&fit=crop',
-      title: '봉사 사역',
-      description: '지역사회 봉사, 해외 선교, 구제 사역을 통해 이웃을 섬깁니다.',
-    },
-  ];
-
   return (
     <>
       <Header />
@@ -52,9 +26,10 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-serif leading-tight">
               따뜻한 가족 같은<br />동탄구미교회
             </h1>
-            <p className="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
-              소규모 커뮤니티의 친밀함 속에서<br className="hidden sm:block" />
-              하나님의 사랑을 경험하는 교회입니다.
+            <p className="text-base md:text-lg text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
+              동탄구미교회는 대한예수교장로회(통합)에 속한 정통교회(Orthodox Church)이며,<br className="hidden sm:block" />
+              말씀과 은혜와 성령과 사랑이 충만하고,<br className="hidden sm:block" />
+              성령의 아홉 가지 아름다운 열매를 맺어가는 교회입니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/worship" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-medium text-lg transition-colors shadow-lg shadow-primary/30">
@@ -67,48 +42,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Welcome Message */}
+        {/* Scripture Quote */}
         <section className="py-16 bg-cream">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
               <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
               <blockquote className="text-2xl md:text-3xl font-serif text-secondary-dark leading-relaxed mb-4">
-                &ldquo;서로 사랑하라 내가 너희를 사랑한 것 같이<br className="hidden md:block" />
-                너희도 서로 사랑하라&rdquo;
+                &ldquo;교회는 그의 몸이니 만물 안에서<br className="hidden md:block" />
+                만물을 충만하게 하시는 이의 충만함이니라&rdquo;
               </blockquote>
-              <cite className="text-secondary-light text-lg">- 요한복음 13:34 -</cite>
-            </div>
-          </div>
-        </section>
-
-        {/* Worship Schedule */}
-        <section className="section bg-white">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <p className="section-label">Worship Service</p>
-              <h2 className="section-title">예배 안내</h2>
-              <p className="text-secondary-light mt-3 max-w-lg mx-auto">동탄구미교회의 모든 예배에 여러분을 초대합니다</p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {worshipSchedule.map((service) => (
-                <div
-                  key={service.name}
-                  className="p-6 bg-brown-50 rounded-2xl border border-brown-100 hover:border-primary/30 hover:shadow-md transition-all group"
-                >
-                  <div className="text-2xl mb-3">{service.icon}</div>
-                  <h3 className="font-bold text-secondary-dark text-lg mb-2 group-hover:text-primary transition-colors">{service.name}</h3>
-                  <p className="text-primary font-semibold text-xl mb-1">{service.time}</p>
-                  <p className="text-secondary-light text-sm">{service.location}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-10">
-              <Link href="/worship" className="btn-secondary inline-flex items-center gap-2">
-                예배 안내 자세히 보기
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <cite className="text-secondary-light text-lg">- 에베소서 1:23 -</cite>
             </div>
           </div>
         </section>
@@ -135,43 +78,7 @@ export default function Home() {
                   가족 같은 공동체입니다.&rdquo;
                 </blockquote>
                 <p className="text-white/70 font-medium text-lg mb-1">박명수 목사</p>
-                <Link href="/pastor" className="inline-block mt-3 text-primary-light hover:text-primary font-medium transition-colors text-sm">
-                  목사님 소개 자세히 보기 →
-                </Link>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Ministries */}
-        <section className="section bg-brown-50">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <p className="section-label">Our Ministries</p>
-              <h2 className="section-title">사역 안내</h2>
-              <p className="text-secondary-light mt-3 max-w-lg mx-auto">함께 섬기고 나누며 성장하는 공동체</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {ministries.map((ministry) => (
-                <div
-                  key={ministry.title}
-                  className="card overflow-hidden group"
-                >
-                  <div className="h-52 overflow-hidden">
-                    <Image
-                      src={ministry.image}
-                      alt={ministry.title}
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-7 text-center">
-                    <h3 className="text-xl font-bold text-secondary-dark mb-3 font-serif">{ministry.title}</h3>
-                    <p className="text-secondary-light leading-relaxed text-sm">{ministry.description}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -233,40 +140,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Small Groups CTA */}
-        <section className="section bg-brown-50">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
-              <div className="md:w-1/2">
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <Image
-                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
-                    alt="소그룹 모임"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <p className="section-label">Small Groups</p>
-                <h2 className="text-3xl font-bold text-secondary-dark font-serif mb-4">소그룹에서 만나요</h2>
-                <p className="text-secondary-light leading-relaxed mb-6">
-                  동탄구미교회의 소그룹(코이노니아)은 소규모 모임입니다.
-                  함께 말씀을 나누고, 삶을 나누며, 서로를 위해 기도합니다.
-                  진정한 교제는 작은 모임에서 시작됩니다.
-                </p>
-                <Link href="/community" className="btn-primary inline-flex items-center gap-2">
-                  소그룹 안내 보기
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="relative py-20 overflow-hidden">
           <Image
@@ -288,8 +161,8 @@ export default function Home() {
               <Link href="/contact" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-medium text-lg transition-colors shadow-lg shadow-primary/30">
                 오시는 길 안내
               </Link>
-              <Link href="/community" className="bg-white/15 hover:bg-white/25 text-white border border-white/30 px-8 py-4 rounded-full font-medium text-lg transition-colors backdrop-blur-sm">
-                교회 소식 보기
+              <Link href="/about" className="bg-white/15 hover:bg-white/25 text-white border border-white/30 px-8 py-4 rounded-full font-medium text-lg transition-colors backdrop-blur-sm">
+                교회 소개 보기
               </Link>
             </div>
           </div>

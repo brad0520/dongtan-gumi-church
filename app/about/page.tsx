@@ -2,7 +2,6 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -22,7 +21,6 @@ export default function AboutPage() {
       role: '담임목사',
       description: '장로회신학대학교 신학대학원 졸업. 말씀과 기도로 동탄구미교회를 섬기고 있습니다.',
       image: '/pastor-park.jpg',
-      link: '/pastor',
     },
     {
       name: '김애경 전도사',
@@ -33,8 +31,8 @@ export default function AboutPage() {
     },
     {
       name: '최민정 전도사',
-      role: '청소년부 담당',
-      description: '청소년들의 믿음의 성장을 돕고, 청소년부 예배와 활동을 이끌고 있습니다.',
+      role: '청년부 담당',
+      description: '청년들의 믿음의 성장을 돕고, 청년부 예배와 활동을 이끌고 있습니다.',
       image: '/staff-choi.jpg',
       imagePosition: 'center center',
     },
@@ -89,9 +87,23 @@ export default function AboutPage() {
             <p className="text-primary-light font-medium mb-3 tracking-wider text-sm uppercase">About Us</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white font-serif mb-4">교회 소개</h1>
             <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              하나님의 말씀을 중심으로<br className="hidden sm:block" />
-              동탄 지역사회와 함께 성장해온 동탄구미교회입니다.
+              동탄구미교회는 대한예수교장로회(통합)에 속한<br className="hidden sm:block" />
+              정통교회(Orthodox Church)입니다.
             </p>
+          </div>
+        </section>
+
+        {/* Church Introduction */}
+        <section className="py-16 bg-cream">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
+              <p className="text-lg md:text-xl text-secondary leading-relaxed">
+                동탄구미교회는 대한예수교장로회(통합)에 속한 정통교회(Orthodox Church)이며,
+                말씀과 은혜와 성령과 사랑이 충만하고,
+                성령의 아홉 가지 아름다운 열매를 맺어가는 교회입니다.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -157,11 +169,6 @@ export default function AboutPage() {
                     <h3 className="font-bold text-secondary-dark mb-1">{person.name}</h3>
                     <p className="text-primary text-sm font-medium mb-2">{person.role}</p>
                     <p className="text-secondary-light text-xs leading-relaxed">{person.description}</p>
-                    {person.link && (
-                      <Link href={person.link} className="inline-block mt-3 text-primary hover:text-primary-dark text-sm font-medium">
-                        자세히 보기 →
-                      </Link>
-                    )}
                   </div>
                 </div>
               ))}

@@ -7,12 +7,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
+    { name: '담임목사', href: '/pastor' },
     { name: '예배', href: '/worship' },
     { name: '교육', href: '/education' },
     { name: '선교', href: '/mission' },
     { name: '교회', href: '/about' },
-    { name: '미디어', href: '/sermons' },
-    { name: '코이노니아', href: '/community' },
+    { name: '오시는 길', href: '/contact' },
   ];
 
   return (
@@ -21,13 +21,16 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-3">
             <div className="w-9 h-9 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center shadow-sm">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v3m0 0v6m0-6h3m-3 0H9m3 9v3m-6-6H3m18 0h-3M7.05 7.05L4.93 4.93m12.02 0L14.83 7.05m-7.78 9.9L4.93 19.07m14.14 0l-2.12-2.12" />
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11 2v8H3v2h8v8h2v-8h8v-2h-8V2h-2z" />
               </svg>
             </div>
             <div className="flex flex-col">
+              <div className="flex items-center gap-1.5">
+                <span className="text-[9px] text-primary font-medium leading-tight hidden sm:block">대한예수교장로회(통합)</span>
+              </div>
               <span className="text-lg font-bold text-secondary-dark font-serif leading-tight">동탄구미교회</span>
-              <span className="text-[10px] text-secondary-light tracking-wider hidden sm:block">DONGTAN GUMI CHURCH</span>
+              <span className="text-[10px] text-secondary-light tracking-wider hidden sm:block">DONGTANGUMEE CHURCH</span>
             </div>
           </Link>
 
@@ -42,12 +45,6 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-
-          <div className="hidden lg:block">
-            <Link href="/contact" className="btn-primary text-sm px-5 py-2.5">
-              방문 예약
-            </Link>
-          </div>
 
           <button
             className="lg:hidden p-2 text-secondary-dark"
@@ -79,13 +76,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                className="btn-primary text-center mt-3 mx-4"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                방문 예약
-              </Link>
             </nav>
           </div>
         )}

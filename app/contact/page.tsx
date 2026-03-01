@@ -68,11 +68,6 @@ export default function ContactPage() {
                         main: '031-613-3928',
                         sub: '평일 09:00 - 18:00',
                       },
-                      {
-                        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
-                        title: '이메일',
-                        main: 'TBD (확인 필요)',
-                      },
                     ].map((item) => (
                       <div key={item.title} className="flex items-start gap-4">
                         <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -122,65 +117,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Visit Info */}
-        <section className="section bg-brown-50">
-          <div className="container-custom">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <p className="section-label">First Visit</p>
-                <h2 className="section-title">처음 방문하시나요?</h2>
-              </div>
-              <div className="grid sm:grid-cols-3 gap-6">
-                {[
-                  { step: '1', title: '안내데스크 방문', desc: '로비 안내데스크에서 새가족 등록을 해주세요.' },
-                  { step: '2', title: '예배 참석', desc: '안내위원이 좌석을 안내해 드립니다.' },
-                  { step: '3', title: '교제 시간', desc: '예배 후 새가족실에서 다과와 함께 교제합니다.' },
-                ].map((item) => (
-                  <div key={item.step} className="card p-6 text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary font-bold text-lg">{item.step}</span>
-                    </div>
-                    <h3 className="font-bold text-secondary-dark mb-2">{item.title}</h3>
-                    <p className="text-secondary-light text-sm">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Form */}
-        <section className="section bg-white">
-          <div className="container-custom">
-            <div className="max-w-xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold text-secondary-dark font-serif">문의하기</h2>
-                <p className="text-secondary-light text-sm mt-2">궁금한 사항이 있으시면 아래 양식을 작성해 주세요.</p>
-              </div>
-              <div className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-secondary-dark mb-1">이름</label>
-                    <input type="text" className="w-full px-4 py-3 border border-brown-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors bg-brown-50" placeholder="홍길동" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-secondary-dark mb-1">연락처</label>
-                    <input type="tel" className="w-full px-4 py-3 border border-brown-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors bg-brown-50" placeholder="010-1234-5678" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-secondary-dark mb-1">이메일</label>
-                  <input type="email" className="w-full px-4 py-3 border border-brown-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors bg-brown-50" placeholder="email@example.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-secondary-dark mb-1">문의 내용</label>
-                  <textarea rows={5} className="w-full px-4 py-3 border border-brown-100 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none bg-brown-50" placeholder="문의하실 내용을 입력해 주세요." />
-                </div>
-                <button className="w-full btn-primary py-4 text-lg">문의 보내기</button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
