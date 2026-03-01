@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,15 +17,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-brown-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-brown-100">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center shadow-sm">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11 2v8H3v2h8v8h2v-8h8v-2h-8V2h-2z" />
-              </svg>
-            </div>
+            <Image src="/denomination-logo.jpg" alt="대한예수교장로회(통합)" width={36} height={36} className="w-9 h-9 object-contain" />
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="text-[9px] text-primary font-medium leading-tight hidden sm:block">대한예수교장로회(통합)</span>
@@ -64,7 +61,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-brown-100 bg-cream">
+          <div className="lg:hidden py-4 border-t border-brown-100 bg-white">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link

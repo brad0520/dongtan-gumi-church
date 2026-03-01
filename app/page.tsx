@@ -42,25 +42,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Scripture Quote */}
-        <section className="py-16 bg-cream">
+        {/* Scripture Quote - Dark accent band */}
+        <section className="py-14 bg-brown-800">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="w-16 h-0.5 bg-primary mx-auto mb-8" />
-              <blockquote className="text-2xl md:text-3xl font-serif text-secondary-dark leading-relaxed mb-4">
+              <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+              <blockquote className="text-xl md:text-2xl font-serif text-white/90 leading-relaxed mb-4 italic">
                 &ldquo;교회는 그의 몸이니 만물 안에서<br className="hidden md:block" />
                 만물을 충만하게 하시는 이의 충만함이니라&rdquo;
               </blockquote>
-              <cite className="text-secondary-light text-lg">- 에베소서 1:23 -</cite>
+              <cite className="text-primary-light text-sm tracking-wider">에베소서 1:23</cite>
             </div>
           </div>
         </section>
 
         {/* Pastor Message */}
-        <section className="section bg-gradient-to-br from-brown-800 to-secondary-dark">
+        <section className="section bg-white">
           <div className="container-custom">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl flex-shrink-0 ring-4 ring-white/10">
+            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-brown-100 shadow-lg flex-shrink-0">
                 <Image
                   src="/pastor-park.jpg"
                   alt="박명수 담임목사"
@@ -70,71 +70,16 @@ export default function Home() {
                   style={{ objectPosition: 'center 18%' }}
                 />
               </div>
-              <div className="text-center md:text-left text-white">
-                <p className="text-primary-light font-medium mb-4 tracking-wider text-sm uppercase">담임목사 인사말</p>
-                <blockquote className="text-xl md:text-2xl font-serif leading-relaxed mb-6 italic text-white/90">
-                  &ldquo;우리 교회는 크지 않지만 따뜻합니다.<br className="hidden md:block" />
-                  한 사람 한 사람을 소중히 여기는<br className="hidden md:block" />
-                  가족 같은 공동체입니다.&rdquo;
-                </blockquote>
-                <p className="text-white/70 font-medium text-lg mb-1">박명수 목사</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Church Gallery */}
-        <section className="py-16 bg-white">
-          <div className="container-custom">
-            <div className="text-center mb-10">
-              <p className="section-label">Our Church</p>
-              <h2 className="section-title">교회 갤러리</h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden">
-                <Image
-                  src="/church-hero.jpg"
-                  alt="동탄구미교회 전경"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <Image
-                  src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=400&h=400&fit=crop"
-                  alt="예배 모습"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <Image
-                  src="https://images.unsplash.com/photo-1761530027871-5e0f4c13744d?w=400&h=400&fit=crop"
-                  alt="교회 외관"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <Image
-                  src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=400&fit=crop"
-                  alt="성경공부"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <Image
-                  src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=400&fit=crop"
-                  alt="교회 행사"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+              <div className="text-center md:text-left flex-1">
+                <p className="text-primary font-medium mb-3 tracking-wider text-sm uppercase">담임목사 인사말</p>
+                <div className="border-l-4 border-primary/30 pl-6 mb-6">
+                  <blockquote className="text-xl md:text-2xl font-serif leading-relaxed italic text-secondary-dark">
+                    &ldquo;우리 교회는 크지 않지만 따뜻합니다.<br className="hidden md:block" />
+                    한 사람 한 사람을 소중히 여기는<br className="hidden md:block" />
+                    가족 같은 공동체입니다.&rdquo;
+                  </blockquote>
+                </div>
+                <p className="text-secondary font-medium text-lg">박명수 목사</p>
               </div>
             </div>
           </div>
@@ -148,7 +93,7 @@ export default function Home() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-brown-800/80" />
+          <div className="absolute inset-0 bg-brown-800/85" />
           <div className="container-custom relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white font-serif mb-4">
               처음 오시는 분을 환영합니다
