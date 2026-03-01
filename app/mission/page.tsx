@@ -11,6 +11,14 @@ export default function MissionPage() {
   const closeMission = useCallback(() => setSelectedMission(null), []);
 
   useEffect(() => {
+    const imgs = ['/mission-japan.jpg', '/mission-turkey.jpg', '/mission-hampyeong.jpg', '/mission-ghana.jpg'];
+    imgs.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, []);
+
+  useEffect(() => {
     if (selectedMission === null) return;
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeMission();
